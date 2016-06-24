@@ -1,0 +1,25 @@
+.col1 {
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid black;
+
+}
+
+.outer-content {
+    background-color: pink;
+    margin: 20px;
+    width: 75%;
+
+}
+.outer-content .inner-content {
+    background-color: blue;
+    width: 75%;
+}
+.alt:nth-child(even) {
+    background-color:green;
+}
+.alt:nth-child(odd){
+    background-color:blue; 
+}
