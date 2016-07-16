@@ -1,1 +1,54 @@
 
+//Bryce Holewinski
+//CS290, Section 400
+//the below function borrowed some code from: //http://stackoverflow.com/questions/14643617/create-table-using-javascript
+
+//this function will make a table
+function tableMaker(){
+var table = document.createElement('table');
+		table.style.width = '500px';
+    table.style.height = '250px';
+    table.style.border = 'thick solid black';
+    //for loop to create rows
+    for (var i = 0; i < 4; i++){
+    var row = table.insertRow(i);
+    	for (var j = 0; j < 4; j++){
+      //create header row
+      if(i==0){
+      	var newCell = document.createElement('th');
+      	newCell.innerHTML = "Header " + (j+1);
+      	row.appendChild(newCell);
+      }
+      //create inner cells
+      else{
+      	var newCell = row.insertCell(j);
+        newCell.innerHTML = i + ", " + (j+1);
+        newCell.id = (i * 10) + (j+1);
+      }
+      newCell.style.border = 'solid black';
+      newCell.align = 'center';
+      }
+    }
+		document.body.appendChild(table);
+}
+
+//now make some buttons
+var buttonMaker = function (name){
+    var newButton = document.createElement("button");
+    var t = document.createTextNode(name);
+    newButton.id = name;
+    newButton.appendChild(t);
+    document.body.appendChild(newButton);
+};
+
+//now for some cell selection
+/*
+var selectedCell = document.getElementById('11');
+selectedCell.id = "selected";
+selectedCell.style.borderWidth = "3px";
+*/
+
+tableMaker();
+buttonMaker("Up");buttonMaker("Down");
+buttonMaker("Left"); buttonMaker("Right");
+buttonMaker("Mark");
