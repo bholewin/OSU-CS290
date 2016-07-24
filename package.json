@@ -1,0 +1,17 @@
+{
+  "name": "express-forms",
+  "version": "1.0.0",
+  "description": "Uses express for GETs and POSTs",
+  "main": "get&post.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryce Holewinski",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.2",
+    "express-session": "^1.11.3",
+    "mysql": "^2.8.0"
+  }
+}

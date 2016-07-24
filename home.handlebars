@@ -1,0 +1,21 @@
+<!--for the if statement, found how on http://javascriptissexy.com/handlebars-js-tutorial-learn-everything-about-handlebars-js-javascript-templating/ -->
+{{#if this.isGet}}
+<h1> GET Request Received </h1>
+<ul>
+  {{#each dataList}}
+  <li> {{this.name}}: {{this.value}} </li>
+  {{/each}}
+</ul>
+<p></p>
+{{/if}}
+
+{{#if this.isPost}}
+<h1> POST Request </h1>
+<h2> Data Sent: </h2>
+  <ul>
+    {{#each dataList}}
+    <li> {{this.name}}: {{this.value}} </li>
+    {{/each}}
+  </ul>
+{{/if}}
+      
